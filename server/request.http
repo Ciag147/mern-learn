@@ -1,0 +1,59 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "ciag",
+    "password": "ciag"
+}
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "jimmy",
+    "password": "jimmy"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "ciag",
+    "password": "ciag"
+}
+
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q5MjYwZWMzNTU0ZjlkMTIzM2UwNGUiLCJpYXQiOjE2NzcxODMxNDR9.IiFquZJm-bK6i6bDsLVyPXcbITUyuQ7TxEwEQSGkhNY
+
+{
+    "title": "HTML + CSS",
+    "description": "Basic knowledge for web dev",
+    "url": "https://www.w3schools.com/",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q5MjYwZWMzNTU0ZjlkMTIzM2UwNGUiLCJpYXQiOjE2NzUzMzQ0Mjl9.CiwehkkKHdQvJJOob4zzeMJ8nVid3UAScCwx9zA6Y-U
+
+###
+PUT http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q5MjYwZWMzNTU0ZjlkMTIzM2UwNGUiLCJpYXQiOjE2NzcxODMxNDR9.IiFquZJm-bK6i6bDsLVyPXcbITUyuQ7TxEwEQSGkhNY
+{
+    "title": "VUE",
+    "description": "VueJs",
+    "url": "vue.com",
+    "status": "LEARED"
+
+}
+
+###
+DELETE http://localhost:5000/api/posts/63db8ec0c49ea1b599800295
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q5MjYwZWMzNTU0ZjlkMTIzM2UwNGUiLCJpYXQiOjE2NzUzMzQ0Mjl9.CiwehkkKHdQvJJOob4zzeMJ8nVid3UAScCwx9zA6Y-U
+
